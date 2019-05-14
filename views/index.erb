@@ -6,17 +6,12 @@
       <img src='http://bit.ly/1eze8aE' alt="Ahh, an image that didn't load - great!"/>
     </div>
     <h2>"What is your name?"<h2/>
+    <hr align=left width=1000px>
     <% if @name %>
     <h1> My name is <%= @name %></h1>
     <% end %>
-    <hr align=left width=1000px>
-    <br>
-    <form action="/named-cat">
-      Name:
-      <input type="text" name="name">
-      <input type="submit" value="Submit">
-    </form>
   </body>
+
 
 
   <!-- The form onstructs a request to the path specified in the action attribute of the form tag
