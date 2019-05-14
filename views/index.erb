@@ -1,5 +1,24 @@
-<h1>My name is <%=["Yemi", "Peter", "Jason"].sample%><h1/>
-<div style='border: 3px dashed red'>
-  <img src='http://bit.ly/1eze8aE'>
-</div>
-<h2>"Nice cat, right?"<h2/>
+ <head>
+    <title> A cute cat </title>
+  </head>
+  <body>
+    <div style='border: 3px dashed red'>
+      <img src='http://bit.ly/1eze8aE' alt="Ahh, an image that didn't load - great!"/>
+    </div>
+    <h2>"What is your name?"<h2/>
+    <% if @name %>
+    <h1> My name is <%= @name %></h1>
+    <% end %>
+    <hr align=left width=1000px>
+    <br>
+    <form action="/named-cat">
+      Name:
+      <input type="text" name="name">
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+
+
+  <!-- The form onstructs a request to the path specified in the action attribute of the form tag
+  Constructs a query string depending on the inputs within the form, and appends this to the request
+  Sends the request to the server. -->

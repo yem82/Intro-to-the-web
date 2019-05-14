@@ -12,6 +12,14 @@ get "/donuts" do
   "Those are my favs"
 end
 
-get "/cat" do
+get "/random-cat" do
+  @name = ["Yemi", "Peter", "Jason"].sample
+  erb(:index)
+end
+
+get "/named-cat" do
+  p params
+  @name = params[:name]
+  @age = params[:age]
   erb(:index)
 end
